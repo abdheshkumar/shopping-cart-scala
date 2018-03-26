@@ -14,7 +14,7 @@ object Stock {
 
 class Stock {
   private val stock = List(StockItem("apple", 0.60), StockItem("orange", 0.25))
-  private val offers: List[Offer] = List()
+  private val offers: List[Offer] = List(Offer("orange", BuyNGetN(2, 3)), Offer("apple", BuyNGetN(1, 1)))
 
   def getStockItem(item: String): Option[StockItem] = stock.find(_.name == item)
 
